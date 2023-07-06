@@ -353,7 +353,61 @@ function cpt_register_my_cpts()
 	);
 
 	register_post_type('podcasts', $args);
+
+	/** 
+	 * Post Type: YouTubes
+	 */
+
+	 $labels = array(
+		'name'                => _x('YouTubes', 'Post Type General Name', 'apex-branding-design'),
+		'singular_name'       => _x('YouTube', 'Post Type Singular Name', 'apex-branding-design'),
+		'menu_name'           => __('YouTubes', 'apex-branding-design'),
+		'parent_item_colon'   => __('Parent YouTube', 'apex-branding-design'),
+		'all_items'           => __('All YouTubes', 'apex-branding-design'),
+		'view_item'           => __('View YouTube', 'apex-branding-design'),
+		'add_new_item'        => __('Add New YouTube', 'apex-branding-design'),
+		'add_new'             => __('Add New', 'apex-branding-design'),
+		'edit_item'           => __('Edit YouTube', 'apex-branding-design'),
+		'update_item'         => __('Update YouTube', 'apex-branding-design'),
+		'search_items'        => __('Search YouTube', 'apex-branding-design'),
+		'not_found'           => __('Not Found', 'apex-branding-design'),
+		'not_found_in_trash'  => __('Not found in Trash', 'apex-branding-design'),
+	);
+
+	// Set other options for Custom Post Type
+
+	$args = array(
+		'label'               => __('youtubes', 'apex-branding-design'),
+		'description'         => __('youtube', 'apex-branding-design'),
+		'labels'              => $labels,
+		// Features this CPT supports in Post Editor
+		'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',),
+		// You can associate this CPT with a taxonomy or custom taxonomy. 
+		'taxonomies'          => array('genres', 'category'),
+		/* A hierarchical CPT is like Pages and can have
+			* Parent and child items. A non-hierarchical CPT
+			* is like Posts.
+			*/
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+		'show_in_rest' => true,
+
+	);
+
+	register_post_type('youtubes', $args);
 }
+
+
 
 
 
@@ -388,3 +442,19 @@ function apex_new_excerpt_more($more)
 	return '... <a class="more-link" href="' . get_permalink($post->ID) . '">Continue Reading</a>';
 }
 add_filter('excerpt_more', 'apex_new_excerpt_more');
+
+
+function add_plyr_js() 
+{
+	echo '<script src="https://cdn.plyr.io/3.7.3/plyr.polyfilled.js"></script><script>
+	const players = Array.from(document.querySelectorAll(".video-apex")).map((p) => new Plyr(p));</script>';
+}
+
+add_filter('wp_footer', 'add_plyr_js');
+
+function add_plyr_css() 
+{
+	echo '<link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css" />';
+}
+
+add_filter('wp_head', 'add_plyr_css');

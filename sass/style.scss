@@ -155,8 +155,8 @@ body {
 #menu-main-menu li.nav-item .nav-link {
   color: white;
 }
-#menu-main-menu li.nav-item .nav-link:hover {
-  color: rgba(255, 255, 255, 0.548);
+#menu-main-menu li.nav-item .nav-link:hover, ul#menu-main-menu li.current-menu-item a.nav-link {
+  color: rgb(250 197 107);
 }
 .btn {
   text-transform: uppercase;
