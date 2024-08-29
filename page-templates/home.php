@@ -6,7 +6,7 @@
         <div class="container hero-container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center">
-                    <h1 class="hero-header">We help businesses elevate their brand through the power of strategy, design and creativity</h1>
+                    <h1 class="hero-header">We help business elevate their brand through the power of strategy, design and creativity</h1>
 					 <div class="hero-tagline">
                         <p class="mb-3">Has your product or service outgrown your brand?</p> 
                         <p class="mb-3">It's ok, it happens! Luckily, we know how to fix it!</p>
