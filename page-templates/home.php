@@ -93,7 +93,7 @@
                             $the_query->have_posts() ) : $the_query->the_post(); 
                         ?>
 
-                        <div class="col-12 col-md-4 mb-4 mb-lg-0 d-flex flex-column align-items-center"><img class="img-fluid founder-image" src="<?php the_field('thumbnail'); ?>">
+                        <div class="col-12 col-md-6 mb-6 mb-lg-0 d-flex flex-column align-items-center"><img class="img-fluid founder-image" src="<?php the_field('thumbnail'); ?>">
 
                             <?php the_title('<h3 class="team-header">', '</h1>'); ?>
 
