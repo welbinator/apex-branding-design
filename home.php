@@ -10,7 +10,7 @@
  * @package Apex_Branding_&_Design
  */
 
-get_header('apex');
+get_header();
 ?>
 
 <?php if (have_posts()) : ?>
