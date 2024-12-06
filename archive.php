@@ -8,7 +8,7 @@
  * @package Apex_Branding_&_Design
  */
 
-get_header('apex');
+get_header();
 ?>
 
 <div class="section container">

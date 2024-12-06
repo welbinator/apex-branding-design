@@ -13,7 +13,7 @@
  * @package Apex_Branding_&_Design
  */
 
-get_header('apex');
+get_header();
 ?>
 
 <main id="primary" class="site-main">
