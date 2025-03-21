@@ -29,7 +29,7 @@
             ?>
             <?php the_field('archive_excerpt'); ?>
 
-            <div class="btn-container mb-3 mb-md-0"><a class="btn btn-primary" role="button" href="<?php echo esc_url(get_permalink()) ?>">View Case Study</a></div>
+            <div class="btn-container mb-3 mb-md-0"><a class="btn btn-primary" role="button" href="<?php echo esc_url(get_permalink()) ?>">View Project</a></div>
         </div><!-- card-body -->
         <img class="card-img-bottom w-100 d-block card-portfolio-image" src="<?php the_field('hero_image'); ?>">
 

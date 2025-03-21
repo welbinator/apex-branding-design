@@ -127,8 +127,7 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /**
@@ -829,8 +828,7 @@ textarea {
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -844,8 +842,7 @@ textarea {
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
-  -webkit-clip-path: none;
-          clip-path: none;
+  clip-path: none;
   color: #21759b;
   display: block;
   font-size: 0.875rem;
@@ -1056,8 +1053,7 @@ h6 {
 
 .client-background-image {
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   top: 0;
@@ -1257,11 +1253,11 @@ h6 {
 
 .card-portfolio-image {
   width: 100% !important;
+  height: 100%;
   margin-left: auto;
   z-index: 0;
   opacity: 0.2;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 @media (max-width: 991px) {
@@ -1421,8 +1417,7 @@ h6 {
 }
 
 .about-flare img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -1479,8 +1474,7 @@ h6 {
 .hero.work-single img {
   position: absolute;
   z-index: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   filter: blur(0.5rem) grayscale(1) opacity(100%);
@@ -1539,44 +1533,102 @@ h6 {
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-@keyframes shake-horizontal {
+@-webkit-keyframes shake-horizontal {
   0%, 100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   10%, 30%, 50%, 70% {
+    -webkit-transform: translateX(-10px);
     transform: translateX(-10px);
   }
   20%, 40%, 60% {
+    -webkit-transform: translateX(10px);
     transform: translateX(10px);
   }
   80% {
+    -webkit-transform: translateX(8px);
     transform: translateX(8px);
   }
   90% {
+    -webkit-transform: translateX(-8px);
     transform: translateX(-8px);
+  }
+}
+@keyframes shake-horizontal {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+@-webkit-keyframes shake-vertical {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%, 40%, 60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
   }
 }
 @keyframes shake-vertical {
   0%, 100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   10%, 30%, 50%, 70% {
+    -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
   20%, 40%, 60% {
+    -webkit-transform: translateY(8px);
     transform: translateY(8px);
   }
   80% {
+    -webkit-transform: translateY(6.4px);
     transform: translateY(6.4px);
   }
   90% {
+    -webkit-transform: translateY(-6.4px);
     transform: translateY(-6.4px);
   }
 }
 .shake-vertical {
+  -webkit-animation: shake-vertical 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
   animation: shake-vertical 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
 }
 
 .shake-horizontal {
+  -webkit-animation: shake-horizontal 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
   animation: shake-horizontal 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
