@@ -70,7 +70,7 @@
     <div class="section">
         <div class="container text-center"><a class="btn btn-primary" role="button" href="/works">Case Studies</a></div>
     </div>
-    <div class="section">
+    <!-- <div class="section">
         <div class="container">
             <h1 class="text-center">The Team</h1>
         </div>
@@ -104,7 +104,7 @@
                         <?php endif; ?>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 <?php echo get_footer("apex"); ?>
