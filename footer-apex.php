@@ -17,7 +17,7 @@
             <ul class="nav flex-column flex-lg-row mb-5">
                 <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="/works">Work</a></li>
+                <li class="nav-item"><a class="nav-link" href="/works">Case Studies</a></li>
                 <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
                 
